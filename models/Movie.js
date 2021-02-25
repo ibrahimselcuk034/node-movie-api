@@ -6,7 +6,7 @@ const MovieSchema = new Schema({
         // director_id: { type: Schema.Types.ObjectId}
         title: {
             type: String,
-            required: [true, "The field `{PATH}` İS REQUİRED"],
+            required: [true, "The field `{PATH}` is required."],
             maxlength: [50, "The field `{PATH}` must be less than ({MAXLENGTH}) characters."],
             minlength: [5, "The field `{PATH}` must be greater than ({MINLENGTH}) characters."]
         },

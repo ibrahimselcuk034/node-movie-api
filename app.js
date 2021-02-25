@@ -7,6 +7,8 @@ var logger = require("morgan");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var moviesRouter = require("./routes/movie.routes");
+var directorsRouter = require("./routes/director.routes");
+
 //db connect
 const db = require("./helpers/db")(); //Sondaki boş parantez db'yi tetiklemek içindir. Çünkü db bir func.
 
@@ -25,6 +27,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/api/movies", moviesRouter);
+app.use("/api/directors", directorsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
